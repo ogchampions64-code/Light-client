@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ LAUNCHER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ══ Fond animé ══ -->
+    <div class="bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="stars"></div>
+    </div>
+
+    <!-- ══ Intro de démarrage ══ -->
+    <div id="intro" class="intro">
+        <div class="intro-logo">⚡ LAUNCHER</div>
+        <div id="bootLines" class="boot-lines"></div>
+        <div class="boot-bar"><div id="bootFill" class="boot-fill"></div></div>
+    </div>
+
+    <!-- ══ Interface principale ══ -->
+    <main id="app" class="app hidden">
+        <h1 class="title"><span class="zap">⚡</span> LAUNCHER</h1>
+        <p class="subtitle">// Choisis une option — <span class="hint">touches 1 · 2 · 3 acceptées</span></p>
+
+        <div class="buttons">
+            <button class="btn" id="btnClient" style="--delay:.1s">
+                <span class="num">01</span>
+                <span class="icon">🚀</span>
+                <span class="label">Light Client</span>
+                <span class="desc">Télécharge le .jar</span>
+            </button>
+
+            <button class="btn" id="btnDiscord" style="--delay:.25s">
+                <span class="num">02</span>
+                <span class="icon">💬</span>
+                <span class="label">Discord</span>
+                <span class="desc">Rejoins le serveur</span>
+            </button>
+
+            <button class="btn" id="btnMod" style="--delay:.4s">
+                <span class="num">03</span>
+                <span class="icon">🧩</span>
+                <span class="label">Mod Minecraft</span>
+                <span class="desc">Télécharge le mod</span>
+            </button>
+        </div>
+
+        <footer class="footer">Launcher v1.0 — thème noir / bleu</footer>
+    </main>
+
+    <!-- ══ Overlay de téléchargement ══ -->
+    <div id="overlay" class="overlay hidden">
+        <div class="dl-card">
+            <div class="dl-spinner"></div>
+            <h2 id="dlTitle">Téléchargement...</h2>
+            <p id="dlInfo">Préparation...</p>
+            <div class="dl-bar"><div id="dlFill" class="dl-fill"></div></div>
+            <span id="dlPercent" class="dl-percent">0%</span>
+        </div>
+    </div>
+
+    <!-- ══ Toast (notifications) ══ -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
